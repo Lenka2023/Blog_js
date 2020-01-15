@@ -1,5 +1,6 @@
-import mongoose, {Schema} from 'mongose';
-const PostSchema = new Schema(
+import mongoose, {Schema} from 'mongoose';
+let {Schema} = require('mongoose');
+const postSchema = new Schema(
 	{
 		title:String,
 		text:String

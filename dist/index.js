@@ -1,5 +1,11 @@
 "use strict";
 
+var _mongoose = _interopRequireDefault(require("mongoose"));
+
+var _Post = _interopRequireDefault(require("../models/Post"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 /*const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
 
@@ -53,8 +59,23 @@ console.log(data);
 app.listen(3333, function(){
 	console.log('SERVER ZAPUSHEN!');
 });*/
-var arr = [1, 2, 3, 4, 5];
-var result = arr.map(function (value) {
-	return value * 2;
+
+/*const arr=[1,2,3,4,5];
+const result=arr.map(value=>value*2);
+console.log(result);*/
+_mongoose["default"].connect('mongodb://localhost/blog');
+
+var post = new _Post["default"]({
+  title: 'первая запись',
+  text: 'Hello World'
 });
-console.log(result);
+post.save().then(function () {
+  console.log('OK!');
+});
+/*const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/server-side');
+
+const Cat = mongoose.model('Cat', { name: String });
+
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));*/

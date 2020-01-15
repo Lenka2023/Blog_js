@@ -52,6 +52,24 @@ console.log(data);
 app.listen(3333, function(){
 	console.log('SERVER ZAPUSHEN!');
 });*/
-const arr=[1,2,3,4,5];
+/*const arr=[1,2,3,4,5];
 const result=arr.map(value=>value*2);
-console.log(result);
+console.log(result);*/
+import mongoose from 'mongoose';
+
+import PostModel from '../models/Post';
+mongoose.connect('mongodb://localhost/blog');
+const post=new PostModel({
+	title: 'первая запись',
+	text: 'Hello World'
+});
+post.save().then(() =>{
+	console.log('OK!');
+});
+/*const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/server-side');
+
+const Cat = mongoose.model('Cat', { name: String });
+
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));*/

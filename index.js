@@ -56,8 +56,9 @@ app.listen(3333, function(){
 const result=arr.map(value=>value*2);
 console.log(result);*/
 import mongoose from 'mongoose';
-import PostModel from './models/Post';
-mongoose.connect('mongodb://localhost/test');
+
+import PostModel from '../models/Post';
+mongoose.connect('mongodb://localhost/blog');
 const post=new PostModel({
 	title: 'первая запись',
 	text: 'Hello World'
@@ -65,3 +66,10 @@ const post=new PostModel({
 post.save().then(() =>{
 	console.log('OK!');
 });
+/*const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/server-side');
+
+const Cat = mongoose.model('Cat', { name: String });
+
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));*/
