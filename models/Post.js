@@ -1,6 +1,6 @@
-import mongoose, {Schema} from 'mongoose';
-let {Schema} = require('mongoose');
-const postSchema = new Schema(
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const postSchema = new mongoose.Schema(
 	{
 		title:String,
 		text:String
@@ -9,5 +9,5 @@ const postSchema = new Schema(
 		timestamps:true
 	}
 );
-const Post= mongoose.model('Post', PostSchema);
-export default Post;
+const Post= mongoose.model('Post', postSchema);
+module.exports = Post;
