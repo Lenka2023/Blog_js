@@ -48,3 +48,4 @@ post.save().then(() =>{
 
 	}
 }
+module.exports = PostController;
