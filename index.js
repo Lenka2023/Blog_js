@@ -58,7 +58,8 @@ console.log(result);*/
 import mongoose from 'mongoose';
 import express from 'express';
 import bodyParser from 'body-parser';
-import PostModel from '../models/Post';
+//import PostModel from '../models/Post';
+import PostModel from '../controllers/PostController';
 const app=express();
 mongoose.connect('mongodb://localhost/blog');
 app.use(bodyParser.urlencoded({extended:true}));
@@ -100,7 +101,7 @@ app.put('/posts/:id',(req, res)=>{
 		res.json({status:'updatted'});
 	});
 });	
-	})
+	
 app.listen(3333, function(){
 	console.log('SERVER ZAPUSHEN!');
 });
