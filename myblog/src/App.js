@@ -15,18 +15,15 @@ class App extends Component{
               Add post
                   </button>
                   <div className="content">
-                      <div className="post-items"> 
-                          <div className="post-item"> 
-          </div>
-              <a href="#">
-                  <h2>Post title</h2>
-              </a>
-              <p>
-                  <i>Posted on november 2, 2018</i>
-                  <a href="#">Remove</a> 
-                   <a href="#">Edit</a> 
-                </p> 
-                               </div>    
+                      {/*<div className="post-items"> 
+                          <PostItem _id="1" title="Заголовок статьи" createdAt="Fri Nov 02 2018"/> 
+                                                     <PostItem _id="1" title="Заголовок статьи" createdAt="Fri Nov 02 2018"/> 
+                                                     <PostItem _id="1" title="Заголовок статьи" createdAt="Fri Nov 02 2018"/> 
+                                                     <PostItem _id="1" title="Заголовок статьи" createdAt="Fri Nov 02 2018"/> 
+
+
+
+                               </div>*/}    
                             </div>
                         </div>    
                     </div>
