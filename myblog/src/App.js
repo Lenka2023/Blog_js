@@ -1,34 +1,40 @@
 import React, {Component} from 'react';
-//import logo from './logo.svg';
-//import './App.css';
+import {HeaderBlock} from 'components';
 class App extends Component{
   render(){
     return(
      <div className="App">
-     <h1>Hello World!</h1>
-     </div>
-    )
+        <HeaderBlock
+          title="Заголовок сайта"
+          description="Описание"
+          imageUrl="https://images.unsplash.com/photo-1554956742-32f116cf57af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+       />
+        <div className="container">
+              <div className="content">
+                 <button type="button" className="btn btn-primary">
+              Add post
+                  </button>
+                  <div className="content">
+                      <div className="post items"> 
+                          <div className="post item"> 
+          </div>
+              <a href="#">
+                  <h2>Post title</h2>
+              </a>
+              <p>
+                  <i>Posted on november 2, 2018</i>
+                  <a href="#">Remove</a> 
+                   <a href="#">Edit</a> 
+                </p> 
+                               </div>    
+                            </div>
+                        </div>    
+                    </div>
+                  </div>
+               
+    );
   }
 }
-/*function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}*/
+
 
 export default App;

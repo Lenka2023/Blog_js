@@ -1,2 +1,2 @@
-import HeaderBlock from ./HeaderBlock;
+import HeaderBlock from './HeaderBlock';
 export {HeaderBlock};
