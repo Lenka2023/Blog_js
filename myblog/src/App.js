@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HeaderBlock} from 'components';
+import {HeaderBlock, PostItem } from 'components';
 class App extends Component{
   render(){
     return(
@@ -15,8 +15,8 @@ class App extends Component{
               Add post
                   </button>
                   <div className="content">
-                      <div className="post items"> 
-                          <div className="post item"> 
+                      <div className="post-items"> 
+                          <div className="post-item"> 
           </div>
               <a href="#">
                   <h2>Post title</h2>

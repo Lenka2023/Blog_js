@@ -1,2 +1,3 @@
 import HeaderBlock from './HeaderBlock';
-export {HeaderBlock};
+import PostItem from './PostItem';
+export {HeaderBlock, PostItem};
