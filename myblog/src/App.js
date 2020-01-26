@@ -17,10 +17,18 @@ class App extends Component{
               Add post
                   </button>*/}
                   <div className="content">
-                    {/*<div className="post-items"> 
+                    <div className="post-items"> 
                           <PostItem _id="1" title="Заголовок статьи" createdAt="Fri Nov 02 2018"/> 
-                                                                              </div>*/}     
-                               <AddForm/> 
+                                                                              </div>     
+                               <Router>
+                               <div>
+                                <Switch>
+                                {/* <Route path="/" exact component={() => <PostsList />} />*/}
+                                 {/*<Route path="/post/:id" exact component={FullPost} /> */}
+                                {/* <Route path="*" component={NotFound} />*/}
+                                </Switch>
+                                  </div>
+                                  </Router>
                             </div>
                         </div>    
                     </div>
