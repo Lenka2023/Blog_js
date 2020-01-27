@@ -5,7 +5,7 @@ import './FullPost.scss';
 
 const FullPost = ({ title, slug, createdAt, _id, onRemove }) => {
   return (
-    <div className="post-item" >
+    <div className="full-post" >
        
       <h2>{title}</h2>
     

@@ -38,7 +38,7 @@ class App extends Component{
                                       createdAt: '' * new Date(),
                                     },]} />
                                   )}/>
-                                 <Route path="/post/:id" exact component={()=>(FullPost title="Заголовок статьи" createdAt: '' * new Date(), /> )} /> 
+                                 <Route path="/post/:id"  component={()=>(<FullPost title="Заголовок статьи" createdAt={'' * new Date()} /> )} /> 
                                 {/* <Route path="*" component={NotFound} />*/}
                                 </Switch>
                                   </div>
