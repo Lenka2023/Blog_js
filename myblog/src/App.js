@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import {HeaderBlock, PostItem, AddForm } from 'components';
+import {HeaderBlock, PostList, FullPost } from 'components';
 class App extends Component{
   render(){
     return(
@@ -17,14 +17,28 @@ class App extends Component{
               Add post
                   </button>*/}
                   <div className="content">
-                    <div className="post-items"> 
-                          <PostItem _id="1" title="Заголовок статьи" createdAt="Fri Nov 02 2018"/> 
-                                                                              </div>     
+                       
                                <Router>
                                <div>
+                                
                                 <Switch>
-                                {/* <Route path="/" exact component={() => <PostsList />} />*/}
-                                 {/*<Route path="/post/:id" exact component={FullPost} /> */}
+                                 <Route path="/" exact component={()=>(<PostList
+                                  posts={[
+                                    {
+                                      _id: '1',
+                                      title: 'Первая статья',
+                                      createdAt: '' * new Date(),
+                                    },{
+                                     _id: '1',
+                                      title: 'Первая статья',
+                                      createdAt: '' * new Date(),  
+                                    },{
+                                       _id: '1',
+                                      title: 'Первая статья',
+                                      createdAt: '' * new Date(),
+                                    },]} />
+                                  )}/>
+                                 <Route path="/post/:id" exact component={()=>(FullPost title="Заголовок статьи" createdAt: '' * new Date(), /> )} /> 
                                 {/* <Route path="*" component={NotFound} />*/}
                                 </Switch>
                                   </div>
