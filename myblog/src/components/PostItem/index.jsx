@@ -11,6 +11,7 @@ const PostItem = ({ title, slug, createdAt, _id, onRemove }) => {
     </Link>
     <p>
       <i>Posted on {createdAt}</i>
+      // eslint-disable-next-line
       <a href="javascript://" onClick={onRemove}>
         Remove
       </a>

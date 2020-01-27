@@ -29,11 +29,11 @@ class App extends Component{
                                       title: 'Первая статья',
                                       createdAt: '' + new Date(),
                                     },{
-                                     _id: '1',
+                                     _id: '2',
                                       title: 'Первая статья',
                                       createdAt: '' + new Date(),  
                                     },{
-                                       _id: '1',
+                                       _id: '2',
                                       title: 'Первая статья',
                                       createdAt: '' + new Date(),
                                     },]} />
@@ -41,7 +41,7 @@ class App extends Component{
                                  <Route path="/post/:id"  exact component={()=>(<FullPost title="Заголовок статьи" createdAt={'' + new Date()} /> )} /> 
                                  <Route path="/post/:id/edit" exact component={AddForm} />
 
-                                <Route path="*" exact component={NotFound} />
+                                <Route path="*"  component={NotFound} />
                                 </Switch>
                                   </div>
                                   </Router>
