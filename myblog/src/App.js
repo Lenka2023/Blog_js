@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import {HeaderBlock, PostList, FullPost } from 'components';
+import {HeaderBlock, PostList, FullPost, AddForm, NotFound } from 'components';
 class App extends Component{
   render(){
     return(
@@ -27,19 +27,21 @@ class App extends Component{
                                     {
                                       _id: '1',
                                       title: 'Первая статья',
-                                      createdAt: '' * new Date(),
+                                      createdAt: '' + new Date(),
                                     },{
                                      _id: '1',
                                       title: 'Первая статья',
-                                      createdAt: '' * new Date(),  
+                                      createdAt: '' + new Date(),  
                                     },{
                                        _id: '1',
                                       title: 'Первая статья',
-                                      createdAt: '' * new Date(),
+                                      createdAt: '' + new Date(),
                                     },]} />
                                   )}/>
-                                 <Route path="/post/:id"  component={()=>(<FullPost title="Заголовок статьи" createdAt={'' * new Date()} /> )} /> 
-                                {/* <Route path="*" component={NotFound} />*/}
+                                 <Route path="/post/:id"  exact component={()=>(<FullPost title="Заголовок статьи" createdAt={'' + new Date()} /> )} /> 
+                                 <Route path="/post/:id/edit" exact component={AddForm} />
+
+                                <Route path="*" exact component={NotFound} />
                                 </Switch>
                                   </div>
                                   </Router>
