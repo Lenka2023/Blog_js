@@ -5,6 +5,7 @@ const PostsListActions = {
     type: 'POSTS:SET_ITEMS',
     payload: items,
   }),
+  
  /* appendItem: item => ({
     type: 'POSTS:APPEND_ITEM',
     payload: item,

@@ -1,26 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Lenka2023 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-Archakov06
-/
-react-tutorial-blog
-4
-33
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights
-react-tutorial-blog/public/posts.json
-@Archakov06 Archakov06 Подключил Redux, Axios. Добавил модуль PostsList. И еще чет, уже не п…
-c67ae7c on 23 Dec 2018
-62 lines (62 sloc)  4.92 KB
   
 [
   {
@@ -84,15 +62,3 @@ c67ae7c on 23 Dec 2018
     "createdAt": "Wed Apr 19 2006 17:12:18 GMT+0000 (UTC)"
   }
 ]
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
