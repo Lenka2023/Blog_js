@@ -1,6 +1,8 @@
-import { axios } from 'core';
+import  axios  from 'axios';
+//import { axios } from 'core';
+
 
 export default {
-  get: id => axios.get(`/posts${id ? '/' + id : ''}`),
-  remove: id => axios.delete(`/posts/${id}`),
+  get: ()=> axios.get('/posts.json'),
+  
 };
