@@ -4,11 +4,8 @@ import './PostsList.scss';
 
 const PostsList = ({items}) => {
   return (
-    <div className="post-items">
-    {
-    items.map(post=>
-    (<PostItem{...post}/>))
-    }
+     <div className="post-items">
+      {items ? items.map(post => <PostItem {...post}  />) : 'Loading...'}
     </div>
   );
 };
