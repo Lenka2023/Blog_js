@@ -1,8 +1,8 @@
-import  axios  from 'axios';
-//import { axios } from 'core';
+//import  axios  from 'axios';
+import { axios } from 'core';
 
 
 export default {
-  get: ()=> axios.get('/posts.json'),
+  get: ()=> axios.get('/posts'),
   
 };
