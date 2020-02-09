@@ -15,6 +15,11 @@ export default (state = initialState, action) => {
         ...state,
          items: state.items ? [...state.items, payload] : [payload],
       };
+      case 'POSTS:REMOVE_ITEM':
+      return {
+        ...state,
+        items: state.items.filter(item => item._id !== payload),
+      };
    default:
       return state;
        } 
