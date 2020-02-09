@@ -58,11 +58,12 @@ console.log(result);*/
 import mongoose from 'mongoose';
 import express from 'express';
 import bodyParser from 'body-parser';
-//import PostModel from '../models/Post';
+import PostModel from '../src/models/Post';
 import PostController from '../controllers/PostController';
 const Post =new PostController();
 const app=express();
-mongoose.connect('mongodb://localhost/blog');
+mongoose.connect('mongodb://localhost:27017/blog', { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect("mongodb://localhost:27017/YourDB", { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.get('/posts', Post.index);

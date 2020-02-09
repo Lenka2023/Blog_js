@@ -6,6 +6,8 @@ var _express = _interopRequireDefault(require("express"));
 
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 
+var _Post = _interopRequireDefault(require("../src/models/Post"));
+
 var _PostController = _interopRequireDefault(require("../controllers/PostController"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -67,11 +69,14 @@ app.listen(3333, function(){
 /*const arr=[1,2,3,4,5];
 const result=arr.map(value=>value*2);
 console.log(result);*/
-//import PostModel from '../models/Post';
 var Post = new _PostController["default"]();
 var app = (0, _express["default"])();
 
-_mongoose["default"].connect('mongodb://localhost/blog');
+_mongoose["default"].connect('mongodb://localhost:27017/blog', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}); //mongoose.connect("mongodb://localhost:27017/YourDB", { useNewUrlParser: true });
+
 
 app.use(_bodyParser["default"].urlencoded({
   extended: true
