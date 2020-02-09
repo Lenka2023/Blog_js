@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import {HeaderBlock,  FullPost, AddForm, NotFound } from 'components';
-import { PostsList } from 'modules';
+import { PostsList,  FullPost } from 'modules';
 
 class App extends Component{
   render(){
@@ -25,7 +25,7 @@ class App extends Component{
                                 
                                 <Switch>
                                  <Route path="/" exact component={()=><PostsList />}/>
-                                 <Route path="/post/:id"  exact component={()=>(<FullPost title="Заголовок статьи" createdAt={'' + new Date()} /> )} /> 
+                                 <Route path="/post/:id" exact component={FullPost}  /> 
                                  <Route path="/post/:id/edit" exact component={AddForm} />
 
                                 <Route path="*"  component={NotFound} />
