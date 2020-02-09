@@ -10,6 +10,11 @@ export default (state = initialState, action) => {
         ...state,
         items: payload,
       };
+      case 'POSTS:SET_ITEMS':
+     return {
+        ...state,
+        items: [state.items, payload],
+      };
    default:
       return state;
        } 
