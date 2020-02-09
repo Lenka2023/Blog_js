@@ -3,14 +3,32 @@ import { FullPost } from 'components';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PostsListActions from 'modules/PostsList/actions';
+
 class FullPostContainer extends React.Component {
   componentDidMount() {
-  	//...
+    const { post, postId, fetchItem } = this.props;
+    if (!post) {
+      fetchItem(postId);
+    }
   }
   render() {
-  	return <FullPost {...this.props}/>
+    const { post } = this.props;
+    return !post ? (
+      'Loading...'
+    ) : (
+      <FullPost text={post && post.text} createdAt={post && post.createdAt} />
+    );
+  }
+}
+
+const mapStateToProps = ({ posts }, { match }) => ({
+  post: posts.items && posts.items.filter(post => post._id === match.params.id)[0],
+  postId: match.params.id,
+});
+
 export default withRouter(
-   connect(({posts}, {match: {params {id}}, PostsListActions})=>{
-	return posts.items.filter(post=>post._id===id)[0];
-})
-  (FullPostContainer),);
+  connect(
+    mapStateToProps,
+    PostsListActions,
+  )(FullPostContainer),
+);

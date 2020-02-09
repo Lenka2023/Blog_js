@@ -10,10 +10,10 @@ export default (state = initialState, action) => {
         ...state,
         items: payload,
       };
-      case 'POSTS:SET_ITEMS':
+      case 'POSTS:APPEND_ITEM':
      return {
         ...state,
-        items: [state.items, payload],
+         items: state.items ? [...state.items, payload] : [payload],
       };
    default:
       return state;
