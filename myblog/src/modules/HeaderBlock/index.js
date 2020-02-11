@@ -1,3 +1,3 @@
-import FullPost from './containers/HeaderBlock';
+import HeaderBlock from './containers/HeaderBlock';
 
 export default HeaderBlock;

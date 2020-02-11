@@ -14,6 +14,7 @@ const HeaderBlock = ({ title, description, imageUrl }) => {
       </div>
     </div>
   );
+
 };
 
 export default HeaderBlock;

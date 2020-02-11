@@ -6,15 +6,16 @@ const PostsListActions = {
     payload: items,
   }),
   
- /* appendItem: item => ({
+  appendItem: item => ({
     type: 'POSTS:APPEND_ITEM',
     payload: item,
   }),
+  
   removeItem: id => ({
     type: 'POSTS:REMOVE_ITEM',
     payload: id,
-  }),*/
- /* fetchItem: id => dispatch => {
+  }),
+  fetchItem: id => dispatch => {
     postsApi.get(id).then(({ data }) => {
       dispatch(PostsListActions.appendItem(data));
     });
@@ -24,7 +25,7 @@ const PostsListActions = {
       dispatch(PostsListActions.removeItem(id));
       postsApi.remove(id);
     }
-  },*/
+  },
   fetchItems: () => dispatch => {
     postsApi.get().then(({ data }) => {
       dispatch(PostsListActions.setItems(data));
