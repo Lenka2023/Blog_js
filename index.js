@@ -62,9 +62,18 @@ import PostModel from '../src/models/Post';
 import PostController from '../controllers/PostController';
 const Post =new PostController();
 const app=express();
-mongoose.connect('mongodb://localhost:27017/blog', { useNewUrlParser: true, useUnifiedTopology: true });
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true, useUnifiedTopology: true });
 //mongoose.connect("mongodb://localhost:27017/YourDB", { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended:true}));
+const post=new PostModel({
+	title: 'первая запись000000000000000',
+	text: 'Hello World'
+});
 app.use(bodyParser.json());
 app.get('/posts', Post.index);
 app.post('/posts', Post.create);

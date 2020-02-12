@@ -71,8 +71,13 @@ const result=arr.map(value=>value*2);
 console.log(result);*/
 var Post = new _PostController["default"]();
 var app = (0, _express["default"])();
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
-_mongoose["default"].connect('mongodb://localhost:27017/blog', {
+_mongoose["default"].connect('mongodb://localhost:27017/test', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }); //mongoose.connect("mongodb://localhost:27017/YourDB", { useNewUrlParser: true });
@@ -81,6 +86,10 @@ _mongoose["default"].connect('mongodb://localhost:27017/blog', {
 app.use(_bodyParser["default"].urlencoded({
   extended: true
 }));
+var post = new _Post["default"]({
+  title: 'первая запись000000000000000',
+  text: 'Hello World'
+});
 app.use(_bodyParser["default"].json());
 app.get('/posts', Post.index);
 app.post('/posts', Post.create);

@@ -1,10 +1,14 @@
+const mongoose = require('mongoose');
+var Post = mongoose.model('Post');
 class PostController{
 	index(req, res){
 	Post.find().then((err, posts)=>{
 		if(err){
 			res.send(err);
 		}
+		else{
 		res.json(posts);
+	}
 	});
 	}
 	create(req, res){
@@ -23,7 +27,9 @@ post.save().then(() =>{
 		if(!post){
 			res.send({err: 'not found'});
 		}
+		else{
 		res.json(post);
+	}
 	});
 
 	}
@@ -32,7 +38,9 @@ post.save().then(() =>{
 	if(err){
 			res.send(err);
 		}
+		else{
 		res.json({status:'updatted'});
+	}
 	});
 
 	}
